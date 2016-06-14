@@ -5,9 +5,18 @@
 	/*border-color: #000000;*/
 /*}*/
 
+/* Home */
+
+.date{
+	font-size: 0.9em;
+}
+
 /* About Page */
+.twitter-handle{
+	background-color: transparent;
+}
 .fav-padding{
-	margin-right: -70px;
+	margin-right: 100px;
 }
 
 .about{

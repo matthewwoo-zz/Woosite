@@ -1,7 +1,7 @@
 from src.models.posts import Post
 import requests
 import json
-import time
+import unidecode
 
 def get_posts(x):
     result = requests.get('https://medium.com/@matthewedanwoo/latest?format=json')
@@ -11,14 +11,17 @@ def get_posts(x):
     posts = []
     while i < x:
         title = medium_json['payload']['posts'][i]['title']
-        print title
+        title = unidecode.unidecode(title)
         url = medium_json['payload']['posts'][i]['uniqueSlug']
         created_at = medium_json['payload']['posts'][i]['createdAt']
         subtitle = medium_json['payload']['posts'][i]['virtuals']['snippet']
+        subtitle = unidecode.unidecode(subtitle)
         reading_time = medium_json['payload']['posts'][i]['virtuals']['readingTime']
-        posts.append(Post(title=title, url=url, created_at=created_at, subtitle=subtitle, reading_time=reading_time))
+        posts.append(Post(title=title, url=url, created_at=created_at, subtitle=subtitle,
+                          reading_time=reading_time).json())
         i += 1
     return posts
+
 
 
 
