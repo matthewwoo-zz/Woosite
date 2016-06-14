@@ -16,4 +16,5 @@ def about():
     return render_template('about.jinja2')
 
 
-app.run(debug=app.config['DEBUG'], port=4990)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
