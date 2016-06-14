@@ -1,1 +1,1 @@
-web: gunicorn wooster:app --log-file -
+web: gunicorn wooster.wsgi  --log-file -
