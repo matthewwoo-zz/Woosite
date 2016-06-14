@@ -1,0 +1,1 @@
+web: gunicorn wooster.wsgi --log-file -
