@@ -3,4 +3,4 @@ Jinja2==2.8
 Unidecode==0.4.19
 bs4==0.0.1
 gunicorn==19.6
-requests=2.8.0
+requests==2.8.0
