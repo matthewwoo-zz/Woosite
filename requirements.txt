@@ -4,3 +4,5 @@ Unidecode==0.4.19
 bs4==0.0.1
 gunicorn==19.6
 requests==2.8.0
+beautifulsoup4==4.4.1
+uwsgi
