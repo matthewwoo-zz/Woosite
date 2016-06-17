@@ -12,6 +12,9 @@
 }
 
 /* About Page */
+.text-link{
+	background: transparent;
+}
 .twitter-handle{
 	background-color: transparent;
 }
