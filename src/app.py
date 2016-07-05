@@ -6,7 +6,7 @@ from src import medium
 app = Flask(__name__)
 
 @app.route('/')
-def home ():
+def home():
     posts = medium.get_posts(3)
     return render_template('home.jinja2', posts=posts)
 
